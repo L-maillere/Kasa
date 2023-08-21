@@ -1,0 +1,106 @@
+.collapse {
+    position: relative;
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 10px;
+    &_header {
+        height: 52px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: $primary-color;
+        border-radius: 10px;
+        z-index: 2;
+    }
+    & img {
+        position: relative;
+        width: 24px;
+        right: 20px;
+    }
+    & h3 {
+        position: relative;
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34.22px;
+        left: 10px;
+        width: 90%;
+    }
+    &_description_content {
+        background-color: $secondary-color;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 25px 15px 30px;
+        margin-bottom: 0;
+        max-height: 0;
+        transform: translateY(-100%);
+        transition: max-height 0.5s ease, transform 0.45s ease, margin-bottom 0.5s ease;
+        color: $primary-color;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.67px;
+        border-radius: 10px;
+    }
+    &_equipments_content {
+        background-color: $secondary-color;
+        box-sizing: border-box;
+        overflow: hidden;
+        max-height: 0;
+        transform: translateY(-100%);
+        transition: max-height 0.5s ease, transform 0.45s ease, margin-bottom 0.5s ease;
+        color: $primary-color;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.67px;
+        border-radius: 10px;
+        width: 100%;
+        padding: 24px 23px;
+        margin-bottom: 0;
+    }
+    &.description.show-content .collapse_description_content {
+        margin-bottom: 50px;
+        max-height: 500px;
+        transform: translateY(-7%);
+    }
+    &.equipments.show-content .collapse_equipments_content {
+        margin-bottom: 50px;
+        max-height: 500px;
+        transform: translateY(-7%);
+    }
+    &.about {
+        width: 71vw;
+        margin: 30px auto -55px;
+        overflow: hidden;
+        transition: margin 0.5s ease;
+        &.fiability{
+            margin-top: 30px;
+        }
+        &:last-child {
+            margin-bottom: -25px;
+        }
+        &.show-content {
+            margin: 30px auto;
+        }
+        & .fiability_content, .respect_content, .service_content, .security_content {
+            font-size: 18px;
+            color: $primary-color;
+            background-color: $secondary-color;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 25px 15px 30px;
+            max-height: 0;
+            transform: translateY(-100%);
+            transition: max-height 0.5s ease, transform 0.45s ease;
+            overflow: hidden;
+        }
+
+        &.show-content .fiability_content,&.show-content .respect_content,&.show-content .service_content,&.show-content .security_content {
+            max-height: 300px;
+            transform: translateY(-7%);
+        }
+    }
+}

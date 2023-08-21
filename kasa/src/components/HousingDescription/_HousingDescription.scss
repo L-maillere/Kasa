@@ -1,0 +1,32 @@
+.housing {
+    &_description_top {
+        display: flex;
+        justify-content: space-between;
+        width: 86vw;
+        margin: 0 auto;
+        color: $primary-color;
+        & h1 {
+            min-width: fit-content;
+            font-size: 36px;
+            font-weight: 500;
+            margin-top: 30px;
+            line-height: 51.34px;
+        }
+        & h2 {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.67px;
+            margin-bottom: 20px;
+        }
+    }
+    &_wrapper {
+        min-width: fit-content;
+        width: 50%;
+    }
+    &_description_bottom {
+        width: 86vw;
+        margin: 24px auto 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}

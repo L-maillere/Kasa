@@ -1,0 +1,44 @@
+.carousel {
+    position: relative;
+    width: 86vw;
+    height: 415px;
+    margin: 45px auto 0;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: black;
+    &_wrapper {
+    }
+    &_picture {
+    width: 86vw;
+    height: 415px;
+    object-fit: cover;
+    opacity: 0.7;
+    }
+    &_button {
+        position: absolute;
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.next {
+            top: 148.3px;
+            right: 0;
+            z-index: 9999;
+        }
+        &.prev {
+            top: 140.83px;
+            z-index: 9999;
+        }
+    }
+    &_index {
+        position: absolute;
+        color: white;
+        top: 357.67px;
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+        z-index: 9999;
+    }
+}
