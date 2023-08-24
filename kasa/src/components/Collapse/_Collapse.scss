@@ -30,42 +30,23 @@
         left: 10px;
         width: 90%;
     }
-    &_description_content {
+    &_description_content, &_equipments_content {
         background-color: $secondary-color;
         box-sizing: border-box;
         overflow: hidden;
-        padding: 25px 15px 30px;
         margin-bottom: 0;
         max-height: 0;
         transform: translateY(-100%);
         transition: max-height 0.5s ease, transform 0.45s ease, margin-bottom 0.5s ease;
         color: $primary-color;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 25.67px;
-        border-radius: 10px;
-    }
-    &_equipments_content {
-        background-color: $secondary-color;
-        box-sizing: border-box;
-        overflow: hidden;
-        max-height: 0;
-        transform: translateY(-100%);
-        transition: max-height 0.5s ease, transform 0.45s ease, margin-bottom 0.5s ease;
-        color: $primary-color;
-        font-size: 18px;
+        font-size: $common-font-size;
         font-weight: 400;
         line-height: 25.67px;
         border-radius: 10px;
         width: 100%;
         padding: 24px 23px;
-        margin-bottom: 0;
     }
-    &.description.show-content .collapse_description_content {
-        margin-bottom: 50px;
-        max-height: 500px;
-        transform: translateY(-7%);
-    }
+    &.description.show-content .collapse_description_content,
     &.equipments.show-content .collapse_equipments_content {
         margin-bottom: 50px;
         max-height: 500px;
@@ -85,7 +66,10 @@
         &.show-content {
             margin: 30px auto;
         }
-        & .fiability_content, .respect_content, .service_content, .security_content {
+        & .fiability_content,
+         .respect_content,
+         .service_content,
+         .security_content {
             font-size: 18px;
             color: $primary-color;
             background-color: $secondary-color;
@@ -97,8 +81,10 @@
             transition: max-height 0.5s ease, transform 0.45s ease;
             overflow: hidden;
         }
-
-        &.show-content .fiability_content,&.show-content .respect_content,&.show-content .service_content,&.show-content .security_content {
+        &.show-content .fiability_content,
+        &.show-content .respect_content,
+        &.show-content .service_content,
+        &.show-content .security_content {
             max-height: 300px;
             transform: translateY(-7%);
         }
