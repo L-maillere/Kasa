@@ -3,4 +3,6 @@ $secondary-color: #F6F6F6;
 $tertiary-color: #FFFFFF;
 
 $common-width: 86vw;
-$common-font-size: 18px;
+$common-width-mobile: 89vw;
+$common-font-size-little: 18px;
+$common-font-size-big: calc(12px + 0.0112676056 * (100vw - 375px));

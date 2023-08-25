@@ -8,14 +8,24 @@
         align-items: center;
         justify-content: space-between;
         padding-top: 70px;
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+        }
     }
     &_logo {
         color: white;
         height: 40px;
         margin-bottom: 50px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 15px;
+        }
     }
     &_text {
         color: white;
-        font-size: 24px;
+        font-size: $common-font-size-big;
+        @media screen and (max-width: 768px) {
+            width: 133.59px;
+            text-align: center;
+        }
     }
 }

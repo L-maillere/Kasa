@@ -5,12 +5,22 @@
     border-radius: 25px;
     background-color: black;
     margin: 45px auto 0;
+    @media screen and (max-width: 768px) {
+        width: $common-width-mobile;
+        height: 111px;
+        border-radius: 10px;
+        margin: 20px auto 0;
+    }
     &Img {
         width: 100%;
         height: 223px;
         border-radius: 25px;
         object-fit: cover;
         opacity: 70%;
+        @media screen and (max-width: 768px) {
+            height: 111px;
+            border-radius: 10px;
+        }
     }
     &Text {
         width: 100%;
@@ -22,5 +32,11 @@
         font-weight: 500;
         text-align: center;
         color: white;
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+            text-align: left;
+            width: 68%;
+            left: 38%;
+        }
     }
 }

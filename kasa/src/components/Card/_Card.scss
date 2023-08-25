@@ -8,6 +8,12 @@
     padding: 25px 0;
     border-radius: 25px;
     background-color: $secondary-color;
+    @media screen and (max-width: 768px) {
+        width: $common-width-mobile;
+        margin: 12px auto;
+        padding: 0;
+        background-color: white;
+    }
 }
 
 .housingCard {
@@ -15,6 +21,11 @@
     width: 340px;
     height: 340px;
     margin: 1.7vw;
+    @media screen and (max-width: 768px) {
+        width: $common-width-mobile;
+        height: 255px;
+        margin: 10px 0;
+    }
     &Description {
         position: relative;
         width: 100%;
@@ -27,8 +38,9 @@
         }
         & h2 {
             position: absolute;
+            width: 70%;
             bottom: 0;
-            font-size: calc(9px + 0.7vw);
+            font-size: $common-font-size-little;
             font-weight: 500;
             color: white;
             margin: 20px;

@@ -11,15 +11,26 @@
         line-height: 263px;
         font-weight: 700;
         color: $primary-color;
+        @media screen and (max-width: 768px) {
+            font-size: 96px;
+            line-height: 99px;
+        }
     }
     & h3 {
         color: $primary-color;
         font-weight: 500;
         font-size: 36px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
     }
     & a {
         color: $primary-color;
-        font-size: 18px;
+        font-size: $common-font-size-little;
         font-weight: 500;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
     }
 }

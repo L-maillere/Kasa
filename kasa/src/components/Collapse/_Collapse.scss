@@ -5,6 +5,9 @@
     flex-wrap: wrap;
     overflow: hidden;
     border-radius: 10px;
+    @media screen and (max-width: 768px) {
+        width: $common-width-mobile;
+    }
     &_header {
         height: 52px;
         position: relative;
@@ -15,11 +18,22 @@
         background-color: $primary-color;
         border-radius: 10px;
         z-index: 2;
+        @media screen and (max-width: 768px) {
+            height: 30px;
+        }
     }
     & img {
         position: relative;
         width: 24px;
         right: 20px;
+        transition: transform 0.3s ease;
+        @media screen and (max-width: 768px) {
+            width: 16px;
+            right: 12px;
+        }
+        &.rotated {
+            transform: rotate(180deg);
+        }
     }
     & h3 {
         position: relative;
@@ -29,6 +43,10 @@
         line-height: 34.22px;
         left: 10px;
         width: 90%;
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+            line-height: 18.54px;
+        }
     }
     &_description_content, &_equipments_content {
         background-color: $secondary-color;
@@ -39,32 +57,52 @@
         transform: translateY(-100%);
         transition: max-height 0.5s ease, transform 0.45s ease, margin-bottom 0.5s ease;
         color: $primary-color;
-        font-size: $common-font-size;
+        font-size: $common-font-size-little;
         font-weight: 400;
         line-height: 25.67px;
         border-radius: 10px;
         width: 100%;
         padding: 24px 23px;
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            line-height: 17.11px;
+            padding: 10px 12px;
+        }
     }
     &.description.show-content .collapse_description_content,
     &.equipments.show-content .collapse_equipments_content {
         margin-bottom: 50px;
         max-height: 500px;
         transform: translateY(-7%);
+        @media screen and (max-width: 768px) {
+            margin-bottom: 7px;
+        }
     }
     &.about {
         width: 71vw;
         margin: 30px auto -55px;
         overflow: hidden;
         transition: margin 0.5s ease;
+        @media screen and (max-width: 768px) {
+            width: $common-width-mobile;
+        }
         &.fiability{
             margin-top: 30px;
+            @media screen and (max-width: 768px) {
+                margin-top: 20px;
+            }
         }
         &:last-child {
             margin-bottom: -25px;
+            @media screen and (max-width: 768px) {
+                margin-bottom: -20px;                
+            }
         }
         &.show-content {
             margin: 30px auto;
+            @media screen and (max-width: 768px) {
+                margin: 30px auto;
+            }
         }
         & .fiability_content,
          .respect_content,
@@ -80,6 +118,11 @@
             transform: translateY(-100%);
             transition: max-height 0.5s ease, transform 0.45s ease;
             overflow: hidden;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                font-size: 12px;
+                padding: 20px 15px;
+            }
         }
         &.show-content .fiability_content,
         &.show-content .respect_content,

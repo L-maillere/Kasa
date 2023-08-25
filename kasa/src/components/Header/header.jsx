@@ -6,7 +6,9 @@ function Header() {
 
     return (
         <header className="header">
-            <img className="headerLogo" src={logo} alt="logo agence kasa" />
+            <Link className="header_logo_link" to="/">
+                <img className="headerLogo" src={logo} alt="logo agence kasa" />
+            </Link>
             <nav className="headerNav">
                 <Link className={`headerNavLink ${location.pathname === "/" ? "active" : ""} `} to="/">Accueil</Link>
                 <Link className={`headerNavLink ${location.pathname === "/about" ? "active" : ""}`} to="/about">A Propos</Link>
