@@ -7,6 +7,7 @@ function Home() {
         <div className="homeWrapper">
             <Banner />
             <div className="cardsContainer">
+                {/* Génération dynamique des cartes de logement à partir des données */}
                 {housingList.map(housing => (
                     <Card key={housing.id} housing={housing} />
                 ))}

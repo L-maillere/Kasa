@@ -12,6 +12,7 @@ function About() {
     return (
         <>
             <Banner />
+            {/* Composants repliables pour afficher différentes sections de la page "À propos" */}
             <Collapse
                 title="Fiabilité"
                 content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont

@@ -6,6 +6,7 @@ function Rate({ housing }) {
     
     return (
         <div className="housing_rate">
+            {/* Génération dynamique des étoiles en fonction de la note */}
             {stars.map((level) => 
             housing.rating >= level ? (
                 <img key={level.toString()} src={fullStar} alt="note étoile pleine" />

@@ -23,23 +23,24 @@ function HousingDescription({ housing }) {
             </div>
         </div>
         <div className="housing_description_bottom">
+            {/* Composants repliables pour afficher la description et les équipements */}
             <div className="collapse-container">
-            <Collapse
-                title="Description" 
-                content={housing.description} 
-                className="description"
-                isVisible={isDescriptionVisible}
-                onClick={() => setIsDescriptionVisible(!isDescriptionVisible)}
-            />
+                <Collapse
+                    title="Description" 
+                    content={housing.description} 
+                    className="description"
+                    isVisible={isDescriptionVisible}
+                    onClick={() => setIsDescriptionVisible(!isDescriptionVisible)}
+                />
             </div>
             <div className="collapse-container">
-            <Collapse
-                title="Équipements"
-                content={housing.equipments.map(item => <div key={item}>{item}</div>)}
-                className="equipments"
-                isVisible={isEquipmentVisible}
-                onClick={() => setIsEquipmentVisible(!isEquipmentVisible)}
-            />
+                <Collapse
+                    title="Équipements"
+                    content={housing.equipments.map(item => <div key={item}>{item}</div>)}
+                    className="equipments"
+                    isVisible={isEquipmentVisible}
+                    onClick={() => setIsEquipmentVisible(!isEquipmentVisible)}
+                />
             </div>
         </div>
         </>

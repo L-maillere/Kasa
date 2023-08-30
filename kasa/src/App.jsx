@@ -12,9 +12,11 @@ function App() {
 			<Header />
 			<main>
 				<Routes>
+					{/* Configuration des routes pour le routage de l'application */}
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/housing/:housingId" element={<HousingDetails />} />
+					{/* Route générique pour gérer les erreurs 404 */}
 					<Route path="*" element={<Error />} />
 				</Routes>
 			</main>

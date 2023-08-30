@@ -5,8 +5,8 @@ import HousingDescription from "../../components/HousingDescription/HousingDescr
 
 
 function HousingDetails() {
-    const { housingId } = useParams();
-    const housing = housingList.find(house => house.id === housingId);
+    const { housingId } = useParams(); // Récupère l'ID du logement à partir de l'URL
+    const housing = housingList.find(house => house.id === housingId); // Trouve le logement correspondant dans les données
 
     return (
         <div className="housing-wrapper">
